@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | Digital Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="glass container">
+        <div class="logo">
+            <span class="accent-text">Portfolio</span>.
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#experience">Certificates</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-content animate-fade">
+                    <h1>Hi, I'm <span class="accent-text">Minara</span></h1>
+                    <p id="hero-description">
+                       I am a computing undergraduate at SLIIT passionate about software engineering, web development, and machine learning. Currently looking for Software Engineer Intern opportunities where I can apply my technical skills to real-world challenges and continuously grow.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn">View Projects</a>
+                        <a href="#" class="btn btn-secondary">Download CV</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/minara-munasinghe-2a76b3365" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/MinaraMunasinghe" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-image animate-fade">
+                    <div class="image-wrapper">
+                        <div class="outline-frame"></div>
+                        <img id="profile-pic" src="profile.png.jpeg" alt="Minara">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="experience" class="container">
+            <h2 class="section-title">Certificates <span class="accent-text">Timeline</span></h2>
+            <div class="timeline" id="experience-timeline">
+            </div>
+        </section>
+
+        <section id="skills" class="container glass">
+            <h2 class="section-title">Tech <span class="accent-text">Stack</span></h2>
+            <div class="skills-grid" id="skills-grid">
+            </div>
+        </section>
+
+        <section id="projects" class="container">
+            <h2 class="section-title">Featured <span class="accent-text">Projects</span></h2>
+            <div class="projects-grid" id="projects-grid">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-section">
+        <div class="container footer-content">
+            <div class="footer-main">
+                <h2 class="footer-heading">Get in <span class="accent-text">Touch</span></h2>
+                <div class="contact-links">
+                    <a href="mailto:minaramunasinghe28@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        minaramunasinghe28@gmail.com
+                    </a>
+                    <a href="tel:+94711643437" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        +94 71 164 3437
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Minara. Built with <span style="color: #ff4d6d;">&hearts;</span> and Vanilla JS.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content glass">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
