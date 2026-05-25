@@ -400,6 +400,10 @@ h3 {
         grid-template-columns: 1fr;
     }
 
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
     section {
         padding: 3rem 0;
     }
@@ -650,6 +654,90 @@ header nav ul a:hover::after {
     width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
+}
+
+/* Activities & Achievements */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.activity-card {
+    background: #1a1a1a;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.75rem;
+    transition: var(--transition);
+}
+
+.activity-card:hover {
+    border-color: var(--hover-color);
+    transform: translateY(-4px);
+    box-shadow: 0 0 18px var(--accent-glow), 0 8px 28px rgba(255, 105, 180, 0.2);
+}
+
+.activity-card h3 {
+    color: var(--accent-color);
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.activity-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.activity-list > li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.activity-role {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.activity-date {
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.activity-note {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-top: 0.15rem;
+}
+
+.activity-sublist {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.activity-sublist li {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    list-style: disc;
 }
 
 .modal {
