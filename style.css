@@ -1058,7 +1058,7 @@ footer {
         width: 100%;
         max-width: 100%;
         margin: 0;
-        padding: 0.65rem 1rem;
+        padding: 0.9rem 1rem 0.5rem;
         border-radius: 0;
         background: var(--mobile-header-bg);
         backdrop-filter: blur(12px);
@@ -1074,8 +1074,8 @@ footer {
         align-self: center;
         font-size: 1.05rem;
         line-height: 1;
-        margin: 0;
-        padding: 0.15rem 0;
+        margin: 0.25rem 0 0;
+        padding: 0.35rem 0 0.15rem;
     }
 
     .theme-toggle,
@@ -1088,8 +1088,8 @@ footer {
         align-items: center;
         justify-content: center;
         line-height: 1;
-        margin: 0;
-        padding: 0.15rem 0;
+        margin: 0.25rem 0 0;
+        padding: 0.35rem 0 0.15rem;
     }
 
     header nav {
