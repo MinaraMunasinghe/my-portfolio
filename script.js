@@ -198,14 +198,20 @@ document.addEventListener('DOMContentLoaded', () => {
     renderSkills();
     renderProjects();
 
-    // Smooth scroll for nav links
+    // Smooth scroll for nav links (native scroll on mobile for reliable anchoring)
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (!href || !href.startsWith('#')) return;
+
+            const target = document.querySelector(href);
+            if (!target) return;
+
+            // Mobile: use native anchor jump — respects html scroll-padding
+            if (window.matchMedia('(max-width: 768px)').matches) return;
+
             e.preventDefault();
-            const targetId = this.getAttribute('href');
-            document.querySelector(targetId).scrollIntoView({
-                behavior: 'smooth'
-            });
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
 });
