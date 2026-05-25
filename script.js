@@ -137,9 +137,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="project-card animate-fade" style="animation-delay: ${index * 0.1}s" data-id="${project.id}">
                 <img src="${project.image}" alt="${project.title}" class="project-img">
                 <div class="project-overlay">
-                    <p style="color: var(--accent-color); font-weight: 700; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase;">${project.category}</p>
-                    <h3 style="margin: 0.5rem 0;">${project.title}</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary);">${project.shortDesc}</p>
+                    <p class="project-category">${project.category}</p>
+                    <h3 class="project-title">${project.title}</h3>
+                    <p class="project-short-desc">${project.shortDesc}</p>
                 </div>
             </div>
         `).join('');
@@ -157,22 +157,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Modal Functions ---
     function openProjectModal(project) {
         modalBody.innerHTML = `
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--accent-color);">${project.title}</h2>
-            <p style="color: var(--text-secondary); font-weight: 600; margin-bottom: 2rem;">${project.category}</p>
-            <img src="${project.image}" alt="${project.title}" style="width: 100%; height: 300px; object-fit: cover; border-radius: 12px; margin-bottom: 2rem;">
-            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+            <h2 class="modal-title">${project.title}</h2>
+            <p class="modal-category">${project.category}</p>
+            <img src="${project.image}" alt="${project.title}" class="modal-hero-img">
+            <div class="modal-grid">
                 <div>
-                    <h4 style="margin-bottom: 1rem;">Project Overview</h4>
-                    <p>${project.fullDesc}</p>
+                    <h4 class="modal-heading">Project Overview</h4>
+                    <p class="modal-description">${project.fullDesc}</p>
                 </div>
                 <div>
-                    <h4 style="margin-bottom: 1rem;">Technologies</h4>
-                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                        ${project.tech.map(t => `<span style="padding: 4px 12px; background: var(--glass-bg); border: 1px solid var(--accent-color); border-radius: 50px; font-size: 0.8rem;">${t}</span>`).join('')}
+                    <h4 class="modal-heading">Technologies</h4>
+                    <div class="modal-tech-list">
+                        ${project.tech.map(t => `<span class="tech-pill">${t}</span>`).join('')}
                     </div>
                 </div>
             </div>
-            <div style="margin-top: 3rem; display: flex; gap: 1rem;">
+            <div class="modal-actions">
                 <a href="${project.liveDemo || '#'}" target="_blank" rel="noopener noreferrer" class="btn">Live Demo</a>
                 <a href="${project.github || '#'}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Github Repo</a>
             </div>
