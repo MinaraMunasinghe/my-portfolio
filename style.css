@@ -900,3 +900,211 @@ footer {
         padding: 1rem;
     }
 }
+
+/* ==========================================================================
+   MOBILE OPTIMIZATION (phones & small tablets — laptop styles unchanged)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+
+    /* Side breathing room */
+    .container,
+    #hero .container,
+    header.container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    /* Header & navigation */
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1rem 1.25rem;
+    }
+
+    header nav {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.65rem 1.1rem;
+        row-gap: 0.75rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+
+    /* Hero — prevent squish & crop */
+    #hero .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+        overflow: visible;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+        line-height: 1.15;
+    }
+
+    #hero-description {
+        max-width: 100%;
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-btns {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero-btns .btn {
+        flex: 1 1 auto;
+        min-width: min(100%, 220px);
+        text-align: center;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .image-wrapper {
+        width: min(280px, 100%);
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .hero-image .outline-frame {
+        display: none;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Section headings */
+    .section-title {
+        font-size: clamp(1.75rem, 7vw, 2.25rem);
+        margin-bottom: 2.5rem;
+        padding: 0 0.25rem;
+        line-height: 1.2;
+    }
+
+    /* Stack all grids to a single column */
+    .skills-grid,
+    .projects-grid,
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .skills-grid {
+        padding: 2rem 0;
+    }
+
+    .project-card {
+        height: auto;
+        min-height: 280px;
+        max-height: 360px;
+    }
+
+    .project-img {
+        height: 100%;
+        min-height: 280px;
+    }
+
+    /* Timeline readability */
+    .timeline {
+        padding: 0 0.25rem;
+    }
+
+    .timeline-content {
+        padding: 1.25rem 1.5rem;
+    }
+
+    /* Activity cards */
+    .activity-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 92%;
+        max-width: 100%;
+        margin: 8% auto;
+        padding: 2.5rem 1.25rem;
+    }
+
+    .close-modal {
+        right: 1rem;
+        top: 1rem;
+    }
+
+    /* Footer */
+    .footer-section {
+        padding: 3rem 1.25rem 2rem;
+    }
+
+    .footer-heading {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .contact-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .contact-link {
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        font-size: 0.9rem;
+        word-break: break-word;
+    }
+
+    /* Global overflow & text safety */
+    img,
+    #profile-pic {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    .activity-role,
+    .contact-link {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+}
