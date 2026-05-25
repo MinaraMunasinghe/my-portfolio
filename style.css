@@ -939,15 +939,16 @@ footer {
         left: 0;
         right: 0;
         z-index: 1000;
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
         align-items: center;
-        justify-content: space-between;
-        gap: 0.35rem 0.5rem;
+        justify-items: center;
+        gap: 0.45rem;
         width: 100%;
         max-width: 100%;
         margin: 0;
-        padding: 0.5rem 1rem;
+        padding: 0.65rem 1rem;
         border-radius: 0;
         background: rgba(18, 18, 18, 0.92);
         backdrop-filter: blur(12px);
@@ -957,26 +958,73 @@ footer {
     }
 
     header .logo {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+        align-self: center;
         font-size: 1.05rem;
-        flex: 0 0 auto;
+        line-height: 1;
+        margin: 0;
+        padding: 0.15rem 0;
+    }
+
+    .theme-toggle,
+    #theme-toggle {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        margin: 0;
+        padding: 0.15rem 0;
     }
 
     header nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
         width: 100%;
-        flex: 1 1 100%;
-        order: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0.2rem 0;
     }
 
     header nav ul {
+        display: flex;
         flex-wrap: wrap;
+        align-items: center;
         justify-content: center;
-        gap: 0.35rem 0.65rem;
-        row-gap: 0.35rem;
+        gap: 0.4rem 0.65rem;
+        row-gap: 0.4rem;
+        margin: 0;
+        padding: 0.2rem 0;
+    }
+
+    header nav ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
     }
 
     header nav ul li a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         font-size: 0.8rem;
+        line-height: 1.2;
         white-space: nowrap;
+        padding: 0.15rem 0;
+        margin: 0;
+    }
+
+    header nav ul li a::after {
+        bottom: 0;
     }
 
     main {
